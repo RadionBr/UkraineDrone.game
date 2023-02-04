@@ -1,0 +1,329 @@
+/* Видео для заднего фона */
+#video-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 1;
+    background: url(images/bg-poster.png) no-repeat #384657;
+    background-size: cover;
+}
+
+#video-bg > video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto;
+    height: auto; 
+}
+
+@supports (object-fit: cover) {
+    #video-bg > video {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+/* ===
+ Игра 
+=== */
+#app {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 9;
+}
+/* Жизни */
+#lifes {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+}
+
+#lifes span {
+    display: block;
+    margin: 10px;
+    float: left;
+    width: 80px;
+    height: 80px;
+    background: url(images/life.png);
+    background-size: cover;
+}
+/* Кнопки опций игры */
+#options {
+    float: right;
+    height: 40px;
+    margin: 10px;
+}
+#options div {
+    float: left;
+    cursor: pointer;
+}
+#options #score {
+    color: #176a2d;
+    font-size: 24px;
+    margin: 40px 40px;
+    font-family: cursive;
+}
+
+#options #sound,
+#options #sound img {
+    height: 100%;
+    margin: 19px 40px;
+}
+
+/* Игрок */
+#player {
+    height: 200px;
+    position: absolute;
+    top: calc(50% - 225px);
+    left: 60px;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+}
+#player.skin_1 {
+    width: 177px;
+    background: url(images/player_1.png);
+}
+
+#player.skin_2 {
+    width: 177px;
+    background: url(images/player_2.png);
+}
+
+#player.skin_3 {
+    width: 231px;
+     height: 121px;
+    background: url(images/player_3.png);
+}
+
+#player.skin_4 {
+    width: 176px;
+     height: 71px;
+    background: url(images/player_4.png);
+}
+/*добавить хаймарс*/
+.himars {
+    width: 300px;
+    height: 169px;
+    background: url(images/himars.png);
+    border-radius: 2px 5px 5px 2px;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    border-radius: 2px 7px 7px 2px;
+    box-shadow: none;
+    z-index: 5;
+}
+
+.instr {
+    width: 150px;
+    height: 39px;
+    background: url(images/instr.png);
+    border-radius: 2px 5px 5px 2px;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    border-radius: 2px 7px 7px 2px;
+    box-shadow: none;
+    z-index: 5;
+}
+
+
+/* Арсенал */
+.bullet {
+    width: 70px;
+    height: 30px;
+    background: url(images/granata.png);
+    border-radius: 2px 5px 5px 2px;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    border-radius: 2px 7px 7px 2px;
+    box-shadow: none;
+    z-index: 5;
+}
+
+.mina {
+    width: 100px;
+    height: 68px;
+    background: url(images/mina.png);
+    border-radius: 2px 5px 5px 2px;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    border-radius: 2px 7px 7px 2px;
+    box-shadow: none;
+    z-index: 5;
+}
+
+.raketa {
+    width: 100px;
+    height: 39px;
+    background: url(images/raketa.png);
+    border-radius: 2px 5px 5px 2px;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    border-radius: 2px 7px 7px 2px;
+    box-shadow: none;
+    z-index: 5;
+}
+
+/* Взрыв */
+.boom {
+    background: url(images/boom.gif);
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    z-index: 9999;
+    top: 40%;
+    left: 50%;
+}
+/* Враги */
+.enemy {
+    position: absolute;
+    top: calc(70% - 85px);
+    right: 20px;
+    z-index: 999999;
+}
+/* Враг тип 1 */
+.enemy.type-1 {
+    top: calc(30% - 85px);
+    width: 130px;
+    height: 180px;
+    background: url("images/enemy-1.gif") no-repeat;
+}
+/* Враг тип 2 */
+.enemy.type-2 {
+    width: 350px;
+    height: 350px;
+    background: url("images/enemy-2.gif") no-repeat;
+}
+
+.enemy.type-3 {
+    width: 350px;
+    height: 350px;
+    background: url("images/enemy-3.gif") no-repeat;
+}
+
+.enemy.type-4 {
+    width: 350px;
+    height: 350px;
+    background: url("images/enemy-4.gif") no-repeat;
+}
+
+.enemy.type-5 {
+    width: 350px;
+    height: 350px;
+    background: url("images/enemy-5.gif") no-repeat;
+}
+
+.enemy.type-6 {
+    width: 350px;
+    height: 350px;
+    background: url("images/enemy-6.gif") no-repeat;
+}
+
+.enemy.type-7 {
+    width: 350px;
+    height: 350px;
+    background: url("images/enemy-7.gif") no-repeat;
+}
+
+
+
+/*===
+Стартовое окно
+===*/
+#start, #end {
+    background: url("images/rozvidka.jpg") no-repeat;
+    width: 565px;
+    height: 443px;
+    border-radius: 91px;
+    text-align: center;
+    color: #ffff;
+    padding: 2px 63px;
+    margin: 90px auto;
+    font-family: arial black;
+    font-size: 24px;
+}
+#start #select-player {
+    width: 475px;
+    margin: 0 auto;
+}
+#start #select-player span {
+    border-radius: 10px;
+    display: block;
+    float: left;
+    padding: 25px;
+    cursor: pointer;
+}
+
+#start #select-player span.selected {
+    border: 2px solid #326184;
+}
+#start button,
+#end button {
+    padding: 20px 60px;
+    font-size: 24px;
+    font-family: arial black;
+    background: #dfcf10;
+    border-radius: 50px;
+    border: 7px solid #336184;
+    cursor: pointer;
+    margin: 1px;
+    outline: none;
+    color: #FFF;
+    text-transform: uppercase;
+}
+#start button:hover,
+#end button:hover {
+    background: #FF0000;
+}
+/*кнопка инструкции*/
+#instr button {
+    padding: 20px 60px;
+    font-size: 24px;
+    font-family: arial black;
+    background: #dfcf10;
+    border-radius: 50px;
+    border: 7px solid #336184;
+    cursor: pointer;
+    margin: 1px;
+    outline: none;
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+#instr button:hover {
+    background: #FF0000;
+}
+
+
+/*===
+Вспомогательные классы
+===*/
+.clearfix {
+    zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
